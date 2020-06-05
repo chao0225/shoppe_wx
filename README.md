@@ -1,33 +1,18 @@
-# 小小米(vue-store 微信小程序版)
-## 前言
-
-前段时间模仿小米商城做了一个PC端的商城网站[vue-store]( https://github.com/hai-27/vue-store )，最近看了下微信小程序的文档，所以就动手做了个微信小程序版的。
+# shoppe(微信小程序版)
 
 ## 说明
 
-> 本项目复用了 [vue-store]( https://github.com/hai-27/vue-store ) 的后端，在 [store-server](https://github.com/hai-27/store-server) 原来的基础上添加了微信小程序的登录api。
-
-> 利用网课的空余时间边学边做，略为粗糙，有问题或者有好的建议欢迎提Issues。
-
-> 由于是用测试号做的，没有线上预览版。
-
-> PC端Web版：[vue-store]( https://github.com/hai-27/vue-store )。
+> PC端Web版：[shoppe]( https://github.com/chao0225/shoppe_vue_pc )。
 
 > 后端： [store-server](https://github.com/hai-27/store-server) 。
 
->  如果觉得这个项目还不错，您可以点右上角 `Star`支持一下， 谢谢！ ^_^ 
-
 ## 项目简介
 
-为区分小米商城官方小程序，该项目我命名为小小米。该项目与小米官方没有关系，纯属个人瞎搞，若需要购买小米产品请到小米官方商城。
+此网站是一个商城，前端基于微信小程序，后端部分及数据库设计由自己完成，后期由后端人员接手负责。
 
 项目包含4个tabBar：首页、发现页（即商品展示页）、购物车、我的。另有商品详情页、我的收藏、订单结算页面、我的订单。
 
 实现了商品的展示、商品分类查询、关键字搜索商品、商品详细信息展示、用户购物车、订单结算、用户订单、用户收藏列表。
-
-该项目整体参考了 [vue-store]( https://github.com/hai-27/vue-store ) 实现，基本实现了其所有功能，可以说是其的微信小程序版。
-
-后端复用了 [vue-store]( https://github.com/hai-27/vue-store ) 的后端，在 [store-server](https://github.com/hai-27/store-server) 原来的基础上添加了微信小程序的登录api。
 
 ## 技术栈
 
@@ -97,9 +82,3 @@
 git clone https://github.com/hai-27/store-miniprogram.git
 导入项目到微信开发者工具即可
 ```
-
-
-
-**作者** [hai-27](https://github.com/hai-27)
-
-2020年3月31日
