@@ -2,7 +2,7 @@
 
 ## 说明
 
-> PC端Web版：[shoppe]( https://github.com/chao0225/shoppe_vue_pc )。
+> PC版：[shoppe]( https://github.com/chao0225/shoppe_vue_pc )。
 
 > 后端： [shoppe-server](https://github.com/chao0225/shoppe-server) 。
 
