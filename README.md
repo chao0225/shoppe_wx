@@ -4,7 +4,7 @@
 
 > PC版：[shoppe]( https://github.com/chao0225/shoppe_vue_pc )。
 
-> 后端： [shoppe-server](https://github.com/chao0225/shoppe-server) 。
+> 后端： [shoppe_server](https://github.com/chao0225/shoppe_server) 。
 
 ## 项目简介
 
