@@ -1,0 +1,50 @@
+<!--pages/details/details.wxml-->
+<i-message id="message" />
+<!-- 轮播图 -->
+<view class="carousel">
+  <swiper autoplay circular indicator-dots indicator-color="#edece8" indicator-active-color="#8a8a8a" interval="3000" duration="1000" style="height:250px;">
+    <block wx:for="{{productImages}}" wx:key="id">
+      <swiper-item>
+        <image src="{{baseURL+item.product_picture}}" class="product-img"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!-- 轮播图/ -->
+<!-- 商品信息 -->
+<view class="pro-info">
+  <h2 class="pro-title">{{productInfo.product_name}}</h2>
+  <h3 class="pro-des">{{productInfo.product_intro}}</h3>
+  <p class="pro-price">
+    <text>{{productInfo.product_selling_price}}元</text>
+    <text class="del" wx:if="{{productInfo.product_selling_price<productInfo.product_price}}">{{productInfo.product_price}}元</text>
+  </p>
+</view>
+<!-- 商品信息/ -->
+<!-- 用户购买信息 -->
+<view class="info-list">
+  <i-cell-group>
+    <i-cell label="送至" title="广州市 白云区" is-link></i-cell>
+    <i-cell label="已选" title="{{productInfo.product_name}}" is-link></i-cell>
+  </i-cell-group>
+</view>
+<!-- 用户购买信息/ -->
+<!-- 猜你喜欢 -->
+<my-list arr="{{hotProduct}}" titleName="猜你喜欢"></my-list>
+<!-- 猜你喜欢/ -->
+<!-- 底栏 -->
+<view style="height:50px;"></view>
+<view class="bottom-bar">
+  <navigator open-type="switchTab" url="/pages/shoppingCart/shoppingCart" hover-class="none">
+    <view class="shopping-cart">
+      <i-tab-bar-item key="remind" icon="publishgoods_fill" count="{{getNum}}"></i-tab-bar-item>
+    </view>
+  </navigator>
+  <view class="add-shopping-cart" bindtap="addShoppingCart">
+    <text>加入购物车</text>
+  </view>
+  <view class="add-collect" bindtap="addCollect">
+    <text>喜欢</text>
+  </view>
+</view>
+<!-- 底栏/ -->

@@ -1,0 +1,29 @@
+<!--pages/shoppingCart/shoppingCart.wxml-->
+<i-message id="message" />
+<!-- 购物车主体 -->
+<block wx:for="{{getShoppingCart}}" wx:key="id">
+  <i-card full checked title="{{item.productName}}" extra="{{item.price+'元'}}" thumb="{{baseURL+item.productImg}}">
+    <radio slot="check" checked="{{item.check}}" data-key="{{index}}" data-checked="{{item.check}}" color="#ff6700" bindtap="handleChangeChecked" />
+    <view slot="content">
+      <text class="total">小计：{{item.num*item.price}}元</text>
+      <i-input-number class="input-number" value="{{ item.num }}" data-key="{{index}}" data-productId="{{item.productID}}" data-value="{{item.num}}" min="1" max="{{item.maxNum}}" bindchange="handleChangeNum" />
+      <i-icon class="delete" size="18" color="#8a8a8a" type="trash" bindtap="bindDelete" data-productId="{{item.productID}}" />
+    </view>
+  </i-card>
+</block>
+<block wx:if="{{getShoppingCart.length == 0}}">
+  <view class="cart-empty">
+    <image src="../../static/imgs/cart-empty.jpg"></image>
+    <text>您的购物车还是空的哦！</text>
+  </view>
+</block>
+<!-- 购物车主体/ -->
+<!-- 底栏 -->
+<view style="height:50px;"></view>
+<view class="cart-tabbar">
+  <radio value="全选" checked="{{getIsAllCheck}}" data-value="{{getIsAllCheck}}" color="#ff6700" bindtap="handleChangeCheckAll" class="check-box" />
+  <text class="totalNum">已选: <text class="num">{{getCheckNum}}</text>件</text>
+  <button class="btn" bindtap="toPay">结算</button>
+  <text class="totalPrice">合计: <text class="num">{{getTotalPrice}}</text>元</text>
+</view>
+<!-- 底栏/ -->
