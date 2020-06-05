@@ -79,6 +79,6 @@
 
 ```
 请clone项目到本地
-git clone https://github.com/hai-27/store-miniprogram.git
+git clone https://github.com/chao0225/shoppe_server.git
 导入项目到微信开发者工具即可
 ```
